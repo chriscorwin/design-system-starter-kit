@@ -81,3 +81,39 @@
     </li>
   </ul>
 </div>
+
+
+
+<div class="slds-page-header slds-m-bottom_small" role="banner">
+
+    <div class=" slds-grid">
+      <div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center;">
+        <h1 class="slds-col">
+          <span class="slds-page-header__title slds-truncate" title="Server Center">Server Center</span>
+        </h1>
+        <div class="slds-col"><span id="statusBadge" class="slds-badge">Badge Label</span></div>
+        <div id="serverToggle" class="slds-form-element slds-col" style="align-self: baseline;">
+          <label class="slds-checkbox_toggle slds-grid">
+            <span class="slds-form-element__label slds-m-bottom_none">Run Server</span>
+            <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16" aria-describedby="checkbox-toggle-16" />
+            <span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+              <span class="slds-checkbox_faux"></span>
+              <span class="slds-checkbox_on">Run</span>
+              <span class="slds-checkbox_off">Stop</span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center;">
+        <div id="statusIndicator" class="slds-col slds-size_2-of-3">Run Time: 00:00:00</div>
+        <div class="slds-col slds-size_1-of-3">View Server Info
+          <span onclick="toggleServerInfo()" class="slds-icon_container slds-icon-utility-info" title="Server Info Icon" style="cursor: pointer;">
+            <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+              <use href="styles/icons/utility-sprite/svg/symbols.svg#info"></use>
+            </svg>
+            <span class="slds-assistive-text">Server Info Icon</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
