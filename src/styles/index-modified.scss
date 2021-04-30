@@ -1,0 +1,78 @@
+
+//
+// Prototype styles (using the Sass CSS preprocessor)
+//
+
+//
+// First, we're importing the design system from the npm package
+//
+$static-font-path: '/assets/fonts/webfonts';
+
+@import 'node_modules/@salesforce-ux/design-system/scss/index';
+
+//
+// Then, we're importing some styles via Sass partials (filenames starting with a "_")
+//
+@import 'footer';
+
+//
+// We can also add styles directly in this file, like so:
+//
+
+.landing {
+  background-color: #fff;
+}
+
+// Push down the global navigation below the header using a placeholder element
+.app-header-placeholder {
+  // A note on Design Tokens in Sass:
+  //
+  // $height-header is a Sass variable pointing to a Design Token
+  // Design tokens are listed at:
+  // https://www.lightningdesignsystem.com/design-tokens/
+  //
+  // This is how you leverage Design Tokens in Sass:
+  height: $height-header;
+}
+
+// Wrap the prototype in a scrollable container
+.app-wrapper {
+  overflow: auto;
+  position: absolute;
+  -webkit-overflow-scrolling: touch;
+  top: $height-context-bar + $height-header;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+
+
+#server-log-panel.slds-utility-panel {
+  bottom: 2.575rem;
+  width: 85vw;
+  height: 62vh;
+  z-index: 2;
+  box-shadow: -1px -2px 4px 4px rgba(0, 0, 0, 0.33);
+  background: #250033e6;
+  min-width: 25rem;
+}
+
+#server-log-panel .server-log-panel__body {
+  height: 80vh;
+}
+
+
+#server-log-panel pre {
+  margin: 0 0 0 2.5rem;
+  padding: 0;
+  border-bottom: 0.5px dashed #58456d36;
+  overflow: initial;
+  color: #ffffffdb;
+
+}
+
+.slds-utility-panel__body.slds-scrollable {
+  padding-bottom: 4rem;
+
+}
