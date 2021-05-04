@@ -13,7 +13,8 @@ $static-font-path: '/assets/fonts/webfonts';
 // Then, we're importing some styles via Sass partials (filenames starting with a "_")
 //
 @import 'footer';
-
+@import 'terminals';
+@import 'badges';
 //
 // We can also add styles directly in this file, like so:
 //
@@ -45,3 +46,32 @@ $static-font-path: '/assets/fonts/webfonts';
   left: 0;
 }
 
+.app-footer-placeholder {
+  height: $height-context-bar + $height-header;
+}
+  
+.slds-wrap.stretch-children {
+  align-items: stretch;
+  .slds-card {
+    height: 100%;
+  }
+
+  .slds-box_link {
+    transition: all 0.25s ease;
+  }
+
+
+  .slds-box_link:hover, .slds-box_link:focus {
+    cursor: pointer;
+    outline: 0;
+    border: 1px solid #1589ee;
+    -webkit-box-shadow: 0 0 0 1px #1589ee inset;
+    box-shadow: 0 0 0 1px #1589ee inset;
+    -webkit-box-shadow: 0 3px 20px #06407475 ;
+    box-shadow: 0 3px 20px  #06407475 ;
+    transform: scale(1.05);
+    transition: all 0.25s ease;
+  }
+
+
+}

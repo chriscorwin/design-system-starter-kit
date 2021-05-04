@@ -1,0 +1,64 @@
+<h2 class="slds-assistive-text">Utility Bar</h2>
+
+<footer class="slds-utility-bar_container" aria-label="Utility Bar">
+	<h2 class="slds-assistive-text">Utility Bar</h2>
+	<ul class="slds-utility-bar" style="height: 3.5rem">
+
+
+		<li class="slds-utility-bar__item">
+			<button onclick="toggleServerInfo()" class="slds-button slds-utility-bar__action " aria-pressed="true">
+			<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#call"></use>
+			</svg>
+			<span class="slds-utility-bar__text">Server Log</span>
+		</button>
+		</li>
+		<li class="slds-utility-bar__item">
+			<button onclick="toggleDebugInfo()" class="slds-button slds-utility-bar__action" aria-pressed="false">
+			<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
+			</svg>
+			<span class="slds-utility-bar__text">Debug Log</span>
+		</button>
+		</li>
+		<li class="slds-utility-bar__item">
+			<button onclick="toggleErrorInfo()" class="slds-button slds-utility-bar__action" aria-pressed="false">
+			<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#note"></use>
+			</svg>
+			<span class="slds-utility-bar__text">Error Log</span>
+		</button>
+		</li>
+		<li class="slds-utility-bar__action slds-col_bump-right slds-shrink-none">
+			<input type="checkbox" checked="true" id="scroll-toggle" />&nbsp;Scroll Logs with output
+		</li>
+
+		<li class="slds-utility-bar__item">
+			<div class="slds-form-element slds-utility-bar__action">
+				<label class="slds-checkbox_toggle slds-grid">
+					<span class="slds-form-element__label slds-m-bottom_none">Server Status</span>
+					<input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16"
+						aria-describedby="checkbox-toggle-16" checked="" />
+					<span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+						<span class="slds-checkbox_faux"></span>
+						<span class="slds-checkbox_on">Running</span>
+						<span class="slds-checkbox_off">Stopped</span>
+					</span>
+				</label>
+			</div>
+		</li>
+		<li class="slds-utility-bar__item">
+
+			<div id="statusIndicator" class="slds-align_absolute-center slds-p-around--small">
+				<dl class="slds-list_inline">
+					<dt class="slds-item_label slds-text-color_weak slds-truncate" title="Run Time:">Run Time:</dt>
+					<dd class="slds-item_detail slds-truncate" title=" 00:00:00"> 00:00:00</dd>
+				</dl>
+				
+			</div>
+		</li>
+
+	</ul>
+
+
+</footer>

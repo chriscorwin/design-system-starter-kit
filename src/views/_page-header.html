@@ -1,83 +1,101 @@
 <!--
-  Record Home Page Header
-  https://www.lightningdesignsystem.com/components/page-headers/#flavor-record-home
+	Record Home Page Header
+	https://www.lightningdesignsystem.com/components/page-headers/#flavor-record-home
 -->
 
+<div class="slds-page-header slds-box slds-grid">
+	<div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center">
+		<h1 class="slds-col">
+			<span class="slds-page-header__title slds-truncate" title="Server Center">Server Center</span>
+		</h1>
+		<div class="slds-col">
+			<span id="statusBadge" class="slds-badge">Badge Label</span>
+		</div>
+		<div id="serverToggle" class="slds-form-element slds-col" style="align-self: baseline">
+			<label class="slds-checkbox_toggle slds-grid">
+			<span class="slds-form-element__label slds-m-bottom_none">Run Server</span>
+			<input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16"
+				aria-describedby="checkbox-toggle-16" />
+			<span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+				<span class="slds-checkbox_faux"></span>
+				<span class="slds-checkbox_on">Run</span>
+				<span class="slds-checkbox_off">Stop</span>
+			</span>
+		</label>
+		</div>
+	</div>
+	<div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center">
+		<div id="statusIndicator" class="slds-col slds-size_2-of-4">
+			Run Time: 00:00:00
+		</div>
+		<div class="slds-col slds-size_1-of-4">
+			View Server Info
+			<span onclick="toggleServerInfo()" class="slds-icon_container slds-icon-utility-info" title="Server Info Icon" style="cursor: pointer">
+			<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+				<use href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+			</svg>
+			<span class="slds-assistive-text">Server Info Icon</span>
+			</span>
+		</div>
+		<div class="slds-col slds-size_1-of-4">
+			<span onclick="listMagickFlows()" class="slds-icon_container slds-icon-utility-info" title="List Magick Flows" style="cursor: pointer">
+			<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+				<use href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+			</svg>
+			<span class="slds-assistive-text">List Magick Flows</span>
+			</span>
+		</div>
+	</div>
+</div>
+
 <div class="slds-page-header slds-m-bottom_small" role="banner">
-  <div class="slds-grid">
-    <div class="slds-col slds-has-flexi-truncate">
-      <div class="slds-media slds-no-space slds-grow">
-        <div class="slds-media__figure">
-          <svg aria-hidden="true" class="slds-icon slds-icon-standard-user">
-            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#user"></use>
-          </svg>
-        </div>
-        <div class="slds-media__body slds-line-height_reset">
-          <div class="slds-page-header__name">
-            <h1>
-              <span>Record Type</span>
-              <span class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="{{ recordTitle }}">{{
-                recordTitle }}</span>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="slds-col slds-no-flex slds-grid slds-align-top">
-      <button class="slds-button slds-button_neutral slds-not-selected" aria-live="assertive">
-        <span class="slds-text-not-selected">
-          <svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-          </svg>Follow</span>
-        <span class="slds-text-selected">
-          <svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-          </svg>Following</span>
-        <span class="slds-text-selected-focus">
-          <svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>Unfollow</span>
-      </button>
-      <div class="slds-button-group" role="group">
-        <button class="slds-button slds-button_neutral">Edit</button>
-        <button class="slds-button slds-button_neutral">Delete</button>
-        <button class="slds-button slds-button_neutral">Clone</button>
-        <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last" aria-expanded="false">
-          <button class="slds-button slds-button_icon-border-filled" aria-haspopup="true">
-            <svg aria-hidden="true" class="slds-button__icon">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-            </svg>
-            <span class="slds-assistive-text">More Actions</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <ul class="slds-grid slds-page-header__detail-row">
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field 1">Field 1</p>
-      <p class="slds-text-body_regular slds-truncate" title="Description that demonstrates truncation with a long text field">Description
-        that demonstrates truncation with a long text field.</p>
-    </li>
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field2 (3)">Field 2 (3)
-        <button class="slds-button slds-button_icon" aria-haspopup="true">
-          <svg aria-hidden="true" class="slds-button__icon slds-button__icon_small">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-          </svg>
-          <span class="slds-assistive-text">More Actions</span>
-        </button>
-      </p>
-      <p class="slds-text-body_regular">Multiple Values</p>
-    </li>
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field 3">Field 3</p><a href="javascript:void(0);">Hyperlink</a>
-    </li>
-    <li class="slds-page-header__detail-block">
-      <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field 4">Field 4</p>
-      <p>
-        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
-      </p>
-    </li>
-  </ul>
+	<div class="slds-grid">
+		<div class="slds-col slds-has-flexi-truncate">
+			<div class="slds-media slds-no-space slds-grow">
+				<div class="slds-media__figure">
+					<svg aria-hidden="true" class="slds-icon slds-icon-standard-screen">
+						<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use>
+					</svg>
+				</div>
+				<div class="slds-media__body slds-line-height_reset">
+					<div class="slds-page-header__name">
+						<h1>
+							<span>Record Type</span>
+							<span class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="{{ recordTitle }}">{{
+								recordTitle }}</span>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slds-col slds-no-flex slds-grid slds-align-top">
+			<button class="slds-button slds-button_neutral slds-not-selected" aria-live="assertive">
+				<span class="slds-text-not-selected">
+					<svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+					</svg>Follow</span>
+				<span class="slds-text-selected">
+					<svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+					</svg>Following</span>
+				<span class="slds-text-selected-focus">
+					<svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+					</svg>Unfollow</span>
+			</button>
+			<div class="slds-button-group" role="group">
+				<button class="slds-button slds-button_neutral">Edit</button>
+				<button class="slds-button slds-button_neutral">Delete</button>
+				<button class="slds-button slds-button_neutral">Clone</button>
+				<div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last" aria-expanded="false">
+					<button class="slds-button slds-button_icon-border-filled" aria-haspopup="true">
+						<svg aria-hidden="true" class="slds-button__icon">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+						</svg>
+						<span class="slds-assistive-text">More Actions</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

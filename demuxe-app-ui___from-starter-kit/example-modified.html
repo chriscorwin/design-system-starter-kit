@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Lightning Design System Starter Kit</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <!--
+    Base Global Header component
+    https://www.lightningdesignsystem.com/components/global-header/
+  -->
+
+  <header class="slds-global-header_container">
+      <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Navigation</a>
+      <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Main Content</a>
+      <div class="slds-global-header slds-grid slds-grid_align-spread">
+        <div class="slds-global-header__item">
+          <div class="slds-global-header__logo"></div>
+        </div>
+        <div class="slds-global-header__item slds-global-header__item_search">
+          <div class="slds-form-element">
+            <label class="slds-form-element__label slds-assistive-text" for="combobox-id-1">Search Salesforce</label>
+            <div class="slds-form-element__control">
+              <div class="slds-combobox-group">
+                <div class="slds-combobox_object-switcher slds-combobox-addon_start">
+                  <div class="slds-form-element">
+                    <label class="slds-form-element__label slds-assistive-text" for="objectswitcher-combobox-id-1">Filter Search by:</label>
+                    <div class="slds-form-element__control">
+                      <div class="slds-combobox_container">
+                        <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-controls="primary-search-combobox-id-1" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                          <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                            <input type="text" class="slds-input slds-combobox__input slds-combobox__input-value" id="objectswitcher-combobox-id-1" aria-controls="objectswitcher-listbox-id-1" autoComplete="off" role="textbox" placeholder=" " value="Accounts"
+                            />
+                            <span class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                              <svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                              </svg>
+                            </span>
+                          </div>
+                          <div id="objectswitcher-listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_x-small slds-dropdown_left" role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical" role="group" aria-label="Suggested for you">
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object0" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="presentation">
+                                  <h3 class="slds-text-title_caps" role="presentation">Suggested for you</h3>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object1" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Accounts">
+                                      <span class="slds-assistive-text">Current Selection:</span> Accounts</span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object2" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Reports"> Reports</span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object3" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Contacts"> Contacts</span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object4" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Files"> Files</span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object5" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Groups"> Groups</span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object6" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Leads"> Leads</span>
+                                  </span>
+                                </div>
+                              </li>
+                              <li role="presentation" class="slds-listbox__item">
+                                <div id="object7" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                  <span class="slds-media__figure">
+                                    <svg class="slds-icon slds-icon_x-small slds-listbox__icon-selected" aria-hidden="true">
+                                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+                                    </svg>
+                                  </span>
+                                  <span class="slds-media__body">
+                                    <span class="slds-truncate" title="Notes"> Notes</span>
+                                  </span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-combobox_container slds-combobox-addon_end">
+                  <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" id="primary-search-combobox-id-1" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left slds-global-search__form-element" role="none">
+                      <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_left">
+                        <svg class="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
+                          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                        </svg>
+                      </span>
+                      <input type="text" class="slds-input slds-combobox__input" id="combobox-id-1" aria-autocomplete="list" aria-controls="search-listbox-id-1" autoComplete="off" role="textbox" placeholder="Search Salesforce" />
+                    </div>
+                    <div id="search-listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                      <ul class="slds-listbox slds-listbox_vertical" role="group" aria-label="Recent Items">
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="option0" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_center" role="presentation">
+                            <h3 class="slds-text-title_caps" role="presentation">Recent Items</h3>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="option1" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-opportunity">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce - 1,000 Licenses</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Opportunity • Propecting</span>
+                            </span>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="option2" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-contact">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Art Vandelay</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Contact • avandelay@vandelay.com</span>
+                            </span>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="option3" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-account">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Vandelay Industries</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Account • San Francisco</span>
+                            </span>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="option4" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-event">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#event"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">Salesforce UK 2016 Events</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Event • $20,000</span>
+                            </span>
+                          </div>
+                        </li>
+                        <li role="presentation" class="slds-listbox__item">
+                          <div id="option5" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                            <span class="slds-media__figure">
+                              <span class="slds-icon_container slds-icon-standard-lead">
+                                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="slds-media__body">
+                              <span class="slds-listbox__option-text slds-listbox__option-text_entity">H.E. Pennypacker</span>
+                              <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Lead • Nursing</span>
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slds-global-header__item">
+          <ul class="slds-global-actions">
+            <li class="slds-global-actions__item">
+              <div class="slds-global-actions__favorites slds-dropdown-trigger slds-dropdown-trigger_click">
+                <div class="slds-button-group">
+                  <button class="slds-button slds-button_icon slds-global-actions__favorites-action slds-button_icon slds-button_icon-border slds-button_icon-small" aria-pressed="false" title="Toggle Favorites">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#favorite"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Toggle Favorite</span>
+                  </button>
+                  <button class="slds-button slds-button_icon slds-global-actions__favorites-more slds-button_icon slds-button_icon-border slds-button_icon-small" title="View Favorites">
+                    <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                    </svg>
+                    <span class="slds-assistive-text">View Favorites</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="slds-global-actions__item">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__task slds-global-actions__item-action" aria-haspopup="true" title="Global Actions">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Global Actions</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-global-actions__item">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action" aria-haspopup="true" title="Help and Training">
+                  <svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#question"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Help and Training</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-global-actions__item">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action" aria-haspopup="true" title="Setup">
+                  <svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#setup"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Setup</span>
+                </button>
+              </div>
+            </li>
+            <li class="slds-global-actions__item">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action" title="no new notifications" aria-live="assertive" aria-atomic="true">
+                  <svg class="slds-button__icon slds-global-header__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"></use>
+                  </svg>
+                  <span class="slds-assistive-text">no new notifications</span>
+                </button>
+                <span aria-hidden="true" class="slds-notification-badge">0</span>
+              </div>
+            </li>
+            <li class="slds-global-actions__item">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                <button class="slds-button slds-global-actions__avatar slds-global-actions__item-action" title="person name" aria-haspopup="true">
+                  <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                    <img alt="Person name" src="/assets/images/avatar2.jpg" title="User avatar" />
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+
+
+  <!--
+    Placeholder to push the context bar down
+  -->
+  <div class="app-header-placeholder"></div>
+
+  <!--
+    Navigation Bar component
+    https://www.lightningdesignsystem.com/components/global-navigation/
+  -->
+  <div style="height: 16rem;">
+      <div class="slds-context-bar">
+        <div class="slds-context-bar__primary">
+          <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+            <div class="slds-context-bar__icon-action">
+              <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                <span class="slds-icon-waffle">
+                  <span class="slds-r1"></span>
+                  <span class="slds-r2"></span>
+                  <span class="slds-r3"></span>
+                  <span class="slds-r4"></span>
+                  <span class="slds-r5"></span>
+                  <span class="slds-r6"></span>
+                  <span class="slds-r7"></span>
+                  <span class="slds-r8"></span>
+                  <span class="slds-r9"></span>
+                </span>
+                <span class="slds-assistive-text">Open App Launcher</span>
+              </button>
+            </div>
+            <span class="slds-context-bar__label-action slds-context-bar__app-name">
+              <span class="slds-truncate" title="App Name">App Name</span>
+            </span>
+          </div>
+        </div>
+        <nav class="slds-context-bar__secondary" role="navigation">
+          <ul class="slds-grid">
+            <li class="slds-context-bar__item slds-is-active">
+              <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
+                <span class="slds-assistive-text">Current Page:</span>
+                <span class="slds-truncate" title="Home">Home</span>
+              </a>
+            </li>
+            <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_hover">
+              <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                <span class="slds-truncate" title="Menu Item">Groups</span>
+              </a>
+              <div class="slds-context-bar__icon-action slds-p-left_none">
+                <button class="slds-button slds-button_icon slds-button_icon slds-context-bar__button" aria-haspopup="true" title="Open menu item submenu">
+                  <svg class="slds-button__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
+                  </svg>
+                  <span class="slds-assistive-text">Open menu item submenu</span>
+                </button>
+              </div>
+              <div class="slds-dropdown slds-dropdown_right">
+                <ul class="slds-dropdown__list" role="menu">
+                  <li class="slds-dropdown__item" role="presentation">
+                    <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                      <span class="slds-truncate" title="Main action">
+                        <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" aria-hidden="true">
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add" />
+                        </svg>Main action</span>
+                    </a>
+                  </li>
+                  <li class="slds-dropdown__header slds-has-divider_top-space" role="separator">
+                    <span class="slds-text-title_caps">Menu header</span>
+                  </li>
+                  <li class="slds-dropdown__item" role="presentation">
+                    <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                      <span class="slds-truncate" title="Menu Item One">Contacts</span>
+                    </a>
+                  </li>
+                  <li class="slds-dropdown__item" role="presentation">
+                    <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                      <span class="slds-truncate" title="Menu Item Two">Files</span>
+                    </a>
+                  </li>
+                  <li class="slds-dropdown__item" role="presentation">
+                    <a href="javascript:void(0);" role="menuitem" tabindex="-1">
+                      <span class="slds-truncate" title="Menu Item Three">Chat</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="slds-context-bar__item">
+              <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                <span class="slds-truncate" title="Menu Item">Menu Item</span>
+              </a>
+            </li>
+            <li class="slds-context-bar__item">
+              <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                <span class="slds-truncate" title="Menu Item">Menu Item</span>
+              </a>
+            </li>
+            <li class="slds-context-bar__item">
+              <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
+                <span class="slds-truncate" title="Menu Item">Menu Item</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  <main class="app-wrapper slds-template_default">
+    
+<!--
+	Record Home Page Header
+	https://www.lightningdesignsystem.com/components/page-headers/#flavor-record-home
+-->
+
+<div class="slds-page-header slds-box slds-grid">
+	<div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center">
+		<h1 class="slds-col">
+			<span class="slds-page-header__title slds-truncate" title="Server Center">Server Center</span>
+		</h1>
+		<div class="slds-col">
+			<span id="statusBadge" class="slds-badge">Badge Label</span>
+		</div>
+		<div id="serverToggle" class="slds-form-element slds-col" style="align-self: baseline">
+			<label class="slds-checkbox_toggle slds-grid">
+			<span class="slds-form-element__label slds-m-bottom_none">Run Server</span>
+			<input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16"
+				aria-describedby="checkbox-toggle-16" />
+			<span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+				<span class="slds-checkbox_faux"></span>
+				<span class="slds-checkbox_on">Run</span>
+				<span class="slds-checkbox_off">Stop</span>
+			</span>
+		</label>
+		</div>
+	</div>
+	<div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center">
+		<div id="statusIndicator" class="slds-col slds-size_2-of-4">
+			Run Time: 00:00:00
+		</div>
+		<div class="slds-col slds-size_1-of-4">
+			View Server Info
+			<span onclick="toggleServerInfo()" class="slds-icon_container slds-icon-utility-info" title="Server Info Icon" style="cursor: pointer">
+			<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+				<use href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+			</svg>
+			<span class="slds-assistive-text">Server Info Icon</span>
+			</span>
+		</div>
+		<div class="slds-col slds-size_1-of-4">
+			<span onclick="listMagickFlows()" class="slds-icon_container slds-icon-utility-info" title="List Magick Flows" style="cursor: pointer">
+			<svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+				<use href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+			</svg>
+			<span class="slds-assistive-text">List Magick Flows</span>
+			</span>
+		</div>
+	</div>
+</div>
+
+<div class="slds-page-header slds-m-bottom_small" role="banner">
+	<div class="slds-grid">
+		<div class="slds-col slds-has-flexi-truncate">
+			<div class="slds-media slds-no-space slds-grow">
+				<div class="slds-media__figure">
+					<svg aria-hidden="true" class="slds-icon slds-icon-standard-screen">
+						<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#screen"></use>
+					</svg>
+				</div>
+				<div class="slds-media__body slds-line-height_reset">
+					<div class="slds-page-header__name">
+						<h1>
+							<span>Record Type</span>
+							<span class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title=""></span>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slds-col slds-no-flex slds-grid slds-align-top">
+			<button class="slds-button slds-button_neutral slds-not-selected" aria-live="assertive">
+				<span class="slds-text-not-selected">
+					<svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+					</svg>Follow</span>
+				<span class="slds-text-selected">
+					<svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+					</svg>Following</span>
+				<span class="slds-text-selected-focus">
+					<svg aria-hidden="true" class="slds-button__icon_stateful slds-button__icon_left">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+					</svg>Unfollow</span>
+			</button>
+			<div class="slds-button-group" role="group">
+				<button class="slds-button slds-button_neutral">Edit</button>
+				<button class="slds-button slds-button_neutral">Delete</button>
+				<button class="slds-button slds-button_neutral">Clone</button>
+				<div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-button_last" aria-expanded="false">
+					<button class="slds-button slds-button_icon-border-filled" aria-haspopup="true">
+						<svg aria-hidden="true" class="slds-button__icon">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+						</svg>
+						<span class="slds-assistive-text">More Actions</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+  Using the grid to make a 2-column layout
+  https://www.lightningdesignsystem.com/components/utilities/grid/
+-->
+<div class="slds-grid">
+	<div class="slds-col slds-size_1-of-2">
+		<div class="slds-split-view_container slds-is-open">
+			<button class="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button slds-is-open"
+				aria-controls="split-view-id" aria-expanded="true" title="Close Split View">
+				<svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+					<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+				</svg>
+				<span class="slds-assistive-text">Close Split View</span>
+			</button>
+			<article aria-hidden="false" id="split-view-id"
+				class="slds-split-view slds-grid slds-grid_vertical slds-grow">
+				<header class="slds-split-view__header">
+					<div class="slds-grid slds-grid_vertical-align-center slds-m-bottom_xx-small">
+						<div class="slds-has-flexi-truncate">
+							<div class="slds-media slds-media_center">
+								<div class="slds-media__figure">
+									<div class="slds-icon_container slds-icon-standard-lead">
+										<svg class="slds-icon" aria-hidden="true">
+											<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#lead"></use>
+										</svg>
+										<span class="slds-assistive-text">Leads</span>
+									</div>
+								</div>
+								<div class="slds-media__body">
+									<h1 class="slds-text-heading_small slds-text-color_default slds-p-right_x-small">
+										<button class="slds-button slds-button_reset slds-type-focus slds-truncate"
+											aria-haspopup="true" title="">
+											<span
+												class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+												<span class="slds-truncate" title="My Leads">My Leads</span>
+												<svg class="slds-button__icon slds-button__icon_right slds-no-flex"
+													aria-hidden="true">
+													<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+												</svg>
+											</span>
+										</button>
+									</h1>
+								</div>
+							</div>
+						</div>
+						<div class="slds-no-flex slds-grid">
+							<button class="slds-button slds-button_icon slds-button_icon-border-filled"
+								aria-haspopup="true" title="More Actions">
+								<svg class="slds-button__icon" aria-hidden="true">
+									<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+								</svg>
+								<span class="slds-assistive-text">More Actions</span>
+							</button>
+						</div>
+					</div>
+					<div class="slds-grid slds-grid_vertical-align-center">
+						<p class="slds-text-body_small slds-text-color_weak">42 items • Updated just now</p>
+						<div class="slds-no-flex slds-grid slds-col_bump-left">
+							<div class="slds-button-group">
+								<button
+									class="slds-button slds-button_icon slds-button_icon slds-button_icon-container-more"
+									aria-haspopup="true" title="Display As Split View">
+									<svg class="slds-button__icon" aria-hidden="true">
+										<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#side_list"></use>
+									</svg>
+									<svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+										<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+									</svg>
+									<span class="slds-assistive-text">Display As Split View</span>
+								</button>
+							</div>
+							<div class="slds-button-group">
+								<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container"
+									title="Refresh List">
+									<svg class="slds-button__icon" aria-hidden="true">
+										<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#refresh"></use>
+									</svg>
+									<span class="slds-assistive-text">Refresh List</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="slds-grid slds-grid_vertical">
+					<div class="slds-split-view__list-header slds-grid">
+						<span class="slds-assistive-text">Sorted by:</span>
+						<span>Lead Score
+							<svg class="slds-icon slds-icon_xx-small slds-icon-text-default slds-align-top"
+								aria-hidden="true">
+								<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+							</svg>
+						</span>
+						<span class="slds-assistive-text">- Descending</span>
+					</div>
+					<ul aria-multiselectable="true" class="slds-scrollable_y" role="listbox"
+						aria-label="Select an item to open it in a new workspace tab.">
+						<li class="slds-split-view__list-item slds-is-unread" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="0">
+								<abbr class="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+									<span class="slds-assistive-text">●</span>
+								</abbr>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Riley Shultz">Riley Shultz</span>
+									<span class="slds-truncate slds-col_bump-left" title="99">99</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="Biotech, Inc.">Biotech, Inc.</span>
+									<span class="slds-truncate slds-col_bump-left" title="Nurturing">Nurturing</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item slds-is-unread" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<abbr class="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+									<span class="slds-assistive-text">●</span>
+								</abbr>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Jason A. - VP of Sales">Jason A. - VP of Sales</span>
+									<span class="slds-truncate slds-col_bump-left" title="92">92</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="Case Management Solutions">Case Management
+										Solutions</span>
+									<span class="slds-truncate slds-col_bump-left" title="Contacted">Contacted</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item slds-is-unread" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<abbr class="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+									<span class="slds-assistive-text">●</span>
+								</abbr>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Josh Smith">Josh Smith</span>
+									<span class="slds-truncate slds-col_bump-left" title="90">90</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="Acme, Inc.">Acme, Inc.</span>
+									<span class="slds-truncate slds-col_bump-left" title="Contacted">Contacted</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item slds-is-unread" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<abbr class="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+									<span class="slds-assistive-text">●</span>
+								</abbr>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Bobby Tree">Bobby Tree</span>
+									<span class="slds-truncate slds-col_bump-left" title="89">89</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="Salesforce, Inc.">Salesforce, Inc.</span>
+									<span class="slds-truncate slds-col_bump-left" title="Closing">Closing</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Riley Shultz">Riley Shultz</span>
+									<span class="slds-truncate slds-col_bump-left" title="74">74</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="Tesla">Tesla</span>
+									<span class="slds-truncate slds-col_bump-left" title="Contacted">Contacted</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item slds-is-unread" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<abbr class="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+									<span class="slds-assistive-text">●</span>
+								</abbr>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Andy Smith">Andy Smith</span>
+									<span class="slds-truncate slds-col_bump-left" title="72">72</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="Universal Technologies">Universal
+										Technologies</span>
+									<span class="slds-truncate slds-col_bump-left" title="New">New</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Jim Steele">Jim Steele</span>
+									<span class="slds-truncate slds-col_bump-left" title="71">71</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="BigList, Inc.">BigList, Inc.</span>
+									<span class="slds-truncate slds-col_bump-left" title="New">New</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="John Gardner">John Gardner</span>
+									<span class="slds-truncate slds-col_bump-left" title="70">70</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="3C Systems">3C Systems</span>
+									<span class="slds-truncate slds-col_bump-left" title="Contacted">Contacted</span>
+								</div>
+							</a>
+						</li>
+						<li class="slds-split-view__list-item" role="presentation">
+							<a href="#" aria-selected="false" role="option"
+								class="slds-split-view__list-item-action slds-grow slds-has-flexi-truncate"
+								tabindex="-1">
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate slds-text-body_regular slds-text-color_default"
+										title="Sarah Loehr">Sarah Loehr</span>
+									<span class="slds-truncate slds-col_bump-left" title="68">68</span>
+								</div>
+								<div class="slds-grid slds-wrap">
+									<span class="slds-truncate" title="MedLife, Inc.">MedLife, Inc.</span>
+									<span class="slds-truncate slds-col_bump-left" title="New">New</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+	</div>
+	<div class="slds-col slds-size_1-of-2">
+		<div class="slds-grid">
+			<!--
+		First column
+	  -->
+			<div class="slds-col slds-size_2-of-3">
+				<div class="slds-p-around_medium slds-card">
+					<h2 class="slds-text-heading_medium">Example of injected data</h2>
+					<p class="slds-text-body_regular slds-m-vertical_medium">Data shown in this table comes from <a
+							href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/src/views/data/example.json"><code>views/data/example.json</code></a>.
+					</p>
+					<!--
+			Data table component
+			https://www.lightningdesignsystem.com/components/data-tables/
+
+			Modifier:
+			- fixed layout: slds-table_fixed-layout (to make text truncation work within cells)
+		  -->
+					<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+						<thead>
+							<tr class="slds-line-height_reset">
+								<!--
+				  The first cell (Account Name) requires space for long labels,
+				  so we're manually setting its width to half the size of the table
+				  using the spacing utility slds-size_1-of-2
+				-->
+								<th scope="col" class="slds-size_1-of-2">
+									<div class="slds-truncate" title="Account Name">Account Name</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Billing State/Province">Billing State/Province
+									</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Phone">Phone</div>
+								</th>
+								<th scope="col">
+									<div class="slds-truncate" title="Type">Type</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--
+				Looping around values in Nunjucks
+				http://mozilla.github.io/nunjucks/templating.html#for
+			  -->
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--
+		Second column
+	  -->
+			<div class="slds-p-left_small slds-col slds-size_1-of-3">
+				<div class="slds-card slds-p-around_medium slds-m-top_none">
+					<h2 class="slds-text-heading_medium">Examples of interactions</h2>
+					<p class="slds-text-body_regular slds-m-vertical_medium">A few components are interactive, thanks to
+						the
+						JavaScript bundled in the starter kit.</p>
+					<div class="slds-section slds-is-open">
+						<h3 class="slds-section__title slds-theme_shade slds-m-bottom_medium">
+							<span class="slds-truncate slds-p-horizontal_small" title="Section Title">Tabs</span>
+						</h3>
+						<div aria-hidden="false" class="slds-section__content">
+							<!--
+				Tabs component
+				https://www.lightningdesignsystem.com/components/tabs/
+			  -->
+							<div class="slds-tabs_default">
+								<ul class="slds-tabs_default__nav" role="tablist">
+									<li class="slds-tabs_default__item slds-active" title="Item One"
+										role="presentation"><a class="slds-tabs_default__link"
+											href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true"
+											aria-controls="tab-default-1" id="tab-default-1__item">Item
+											One</a></li>
+									<li class="slds-tabs_default__item slds-text" title="Item Two" role="presentation">
+										<a class="slds-tabs_default__link" href="javascript:void(0);" role="tab"
+											tabindex="-1" aria-selected="false" aria-controls="tab-default-2"
+											id="tab-default-2__item">Item Two</a></li>
+									<li class="slds-tabs_default__item slds-text" title="Item Three"
+										role="presentation"><a class="slds-tabs_default__link"
+											href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false"
+											aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a></li>
+								</ul>
+								<div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel"
+									aria-labelledby="tab-default-1__item">Item
+									One Content</div>
+								<div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel"
+									aria-labelledby="tab-default-2__item">Item
+									Two Content</div>
+								<div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel"
+									aria-labelledby="tab-default-3__item">Item
+									Three Content</div>
+							</div>
+						</div>
+					</div>
+					<div class="slds-section slds-is-open">
+						<h3 class="slds-section__title slds-theme_shade slds-m-bottom_medium">
+							<span class="slds-truncate slds-p-horizontal_small" title="Section Title">Dropdown
+								Menu</span>
+						</h3>
+						<div aria-hidden="false" class="slds-section__content">
+							Click me:
+							<!--
+				Dropdown Menu Component
+				https://www.lightningdesignsystem.com/components/menus/
+			  -->
+							<div class="slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="true">
+								<button class="slds-button slds-button_icon-border-filled" aria-haspopup="true">
+									<svg aria-hidden="true" class="slds-button__icon">
+										<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+									</svg>
+									<span class="slds-assistive-text">Show More</span>
+								</button>
+								<div class="slds-dropdown slds-dropdown_left">
+									<ul class="dropdown__list" role="menu">
+										<li class="slds-dropdown__item">
+											<a href="javascript:void(0);" role="menuitem">
+												<p class="slds-truncate">Menu Item One</p>
+											</a>
+										</li>
+										<li class="slds-dropdown__item">
+											<a href="javascript:void(0);" role="menuitem">
+												<p class="slds-truncate">Menu Item Two</p>
+											</a>
+										</li>
+										<li class="slds-dropdown__item">
+											<a href="javascript:void(0);" role="menuitem">
+												<p class="slds-truncate">Menu Item Three</p>
+											</a>
+										</li>
+										<li class="slds-dropdown__item slds-has-divider_top-space">
+											<a href="javascript:void(0);" role="menuitem">
+												<p class="slds-truncate">Menu Item Four</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="slds-utility-bar_container" aria-label="Utility Bar">
+	<h2 class="slds-assistive-text">Utility Bar</h2>
+	<ul class="slds-utility-bar" style="height: 3.5rem">
+
+		<li class="slds-utility-bar__item">
+			<div class="slds-form-element slds-utility-bar__action">
+				<label class="slds-checkbox_toggle slds-grid">
+					<span class="slds-form-element__label slds-m-bottom_none">Server Status</span>
+					<input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16"
+						aria-describedby="checkbox-toggle-16" checked="" />
+					<span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+						<span class="slds-checkbox_faux"></span>
+						<span class="slds-checkbox_on">Running</span>
+						<span class="slds-checkbox_off">Stopped</span>
+					</span>
+				</label>
+			</div>
+		</li>
+
+		<li class="slds-utility-bar__item x-slds-has-notification">
+			<button class="slds-button slds-utility-bar__action slds-is-active" aria-pressed="false">
+
+				<abbr class="slds-indicator_unread" title="Unread Item" aria-label="Unread Item">
+					<span class="slds-assistive-text">●</span>
+				</abbr>
+
+				<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+					<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_bottom"></use>
+				</svg>
+				<span class="slds-utility-bar__text">Server Log</span>
+			</button>
+		</li>
+		<li class="slds-utility-bar__item">
+			<button class="slds-button slds-utility-bar__action" aria-pressed="false">
+				<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+					<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_bottom"></use>
+				</svg>
+				<span class="slds-utility-bar__text">Error Log</span>
+			</button>
+		</li>
+		<li class="slds-utility-bar__item">
+			<button class="slds-button slds-utility-bar__action" aria-pressed="false">
+				<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+					<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#note"></use>
+				</svg>
+				<span class="slds-utility-bar__text">Debug</span>
+			</button>
+		</li>
+
+		<li class="slds-utility-bar__item ">
+			<button class="slds-button slds-utility-bar__action" aria-pressed="false">
+
+				<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+					<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#cancel_file_request"></use>
+				</svg>
+				<span class="slds-utility-bar__text">
+					<span class="slds-m-bottom_xxx-small">Figma</span>
+					<span>Unsaved</span>
+				</span>
+			</button>
+		</li>
+	</ul>
+
+	<div id="server-log-panel" class="slds-utility-panel slds-grid slds-grid_vertical slds-is-open" role="dialog"
+		aria-labelledby="panel-heading-01">
+		<div class="slds-utility-panel__header slds-grid slds-shrink-none">
+			<div class="slds-media slds-media_center">
+				<div class="slds-media__figure slds-m-right_x-small">
+					<span class="slds-icon_container">
+						<svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+							<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_bottom"></use>
+						</svg>
+					</span>
+				</div>
+				<div class="slds-media__body">
+					<h2 id="panel-heading-01">Server Log</h2>
+				</div>
+			</div>
+			<div class="slds-col_bump-left slds-shrink-none">
+				<button class="slds-button slds-button_icon slds-button_icon" title="Close Panel">
+					<svg class="slds-button__icon" aria-hidden="true">
+						<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+					</svg>
+					<span class="slds-assistive-text">Close Panel</span>
+				</button>
+			</div>
+		</div>
+		<div class="slds-utility-panel__body slds-scrollable">
+			<pre id="buffer998052188">ccorwin</pre>
+			<pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+			<pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+			<pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer815183937">v12.16.1</pre>
+			<pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+			<pre id="buffer884245699"></pre>
+			<pre id="buffer382630615">20 packages are looking for funding</pre>
+			<pre id="buffer349681478">  run `npm fund` for details</pre>
+			<pre id="buffer65053720"></pre>
+			<pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+			<pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+			<pre id="buffer998052188">ccorwin</pre>
+			<pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+			<pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+			<pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer815183937">v12.16.1</pre>
+			<pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+			<pre id="buffer884245699"></pre>
+			<pre id="buffer382630615">20 packages are looking for funding</pre>
+			<pre id="buffer349681478">  run `npm fund` for details</pre>
+			<pre id="buffer65053720"></pre>
+			<pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+			<pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+			<pre id="buffer998052188">ccorwin</pre>
+			<pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+			<pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+			<pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+			<pre
+				id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+			<pre id="buffer815183937">v12.16.1</pre>
+			<pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+			<pre id="buffer884245699"></pre>
+			<pre id="buffer382630615">20 packages are looking for funding</pre>
+			<pre id="buffer349681478">  run `npm fund` for details</pre>
+			<pre id="buffer65053720"></pre>
+			<pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+			<pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+
+		</div>
+	</div>
+</footer>
+
+
+  </main>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>

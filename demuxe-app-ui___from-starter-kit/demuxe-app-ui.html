@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Salesforce Lightning Design System Starter Kit</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+    </head>
+
+    <body>
+        <!--
+    Base Global Header component
+    https://www.lightningdesignsystem.com/components/global-header/
+    -->
+
+        <header class="slds-global-header_container">
+            <a
+                href="javascript:void(0);"
+                class="slds-assistive-text slds-assistive-text_focus"
+                >Skip to Navigation</a
+            >
+            <a
+                href="javascript:void(0);"
+                class="slds-assistive-text slds-assistive-text_focus"
+                >Skip to Main Content</a
+            >
+            <div class="slds-global-header slds-grid slds-grid_align-spread">
+                <div class="slds-global-header__item">
+                    <div class="slds-global-header__logo"></div>
+                </div>
+                <div class="slds-global-header__item">
+                    <ul class="slds-global-actions">
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+                                    aria-haspopup="true"
+                                    title="Help and Training"
+                                >
+                                    <svg
+                                        class="slds-button__icon slds-global-header__icon"
+                                        aria-hidden="true"
+                                    >
+                                        <use
+                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#question"
+                                        ></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Help and Training</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+                                    aria-haspopup="true"
+                                    title="Application Preferences"
+                                >
+                                    <svg
+                                        class="slds-button__icon slds-global-header__icon"
+                                        aria-hidden="true"
+                                    >
+                                        <use
+                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+                                        ></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Application Preferences</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+                                    title="no new notifications"
+                                    aria-live="assertive"
+                                    aria-atomic="true"
+                                >
+                                    <svg
+                                        class="slds-button__icon slds-global-header__icon"
+                                        aria-hidden="true"
+                                    >
+                                        <use
+                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+                                        ></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">no new notifications</span>
+                                </button>
+                                <span aria-hidden="true" class="slds-notification-badge"
+                                    >0</span
+                                >
+                            </div>
+                        </li>
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-global-actions__avatar slds-global-actions__item-action"
+                                    title="person name"
+                                    aria-haspopup="true"
+                                >
+                                    <span
+                                        class="slds-avatar slds-avatar_circle slds-avatar_medium"
+                                    >
+                                        <img
+                                            alt="Person name"
+                                            src="/assets/images/avatar2.jpg"
+                                            title="User avatar"
+                                        />
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!--
+    Placeholder to push the context bar down
+    -->
+        <div class="app-header-placeholder"></div>
+
+        <!--
+    Navigation Bar component
+    https://www.lightningdesignsystem.com/components/global-navigation/
+    -->
+        <div style="height: 16rem">
+            <div class="slds-context-bar slds-context-bar_tabs">
+                <div class="slds-context-bar__primary">
+                <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+                <div class="slds-context-bar__icon-action">
+                <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                <span class="slds-icon-waffle">
+                <span class="slds-r1"></span>
+                <span class="slds-r2"></span>
+                <span class="slds-r3"></span>
+                <span class="slds-r4"></span>
+                <span class="slds-r5"></span>
+                <span class="slds-r6"></span>
+                <span class="slds-r7"></span>
+                <span class="slds-r8"></span>
+                <span class="slds-r9"></span>
+                </span>
+                <span class="slds-assistive-text">Open App Launcher</span>
+                </button>
+                </div>
+                <span class="slds-context-bar__label-action slds-context-bar__app-name">
+                <span class="slds-truncate" title="Demuxe">Demuxe</span>
+                </span>
+                </div>
+                </div>
+                <div class="slds-context-bar__secondary">
+                <div class="slds-context-bar__vertical-divider"></div>
+                <ul class="slds-grid" role="tablist">
+                <li class="slds-context-bar__item slds-context-bar__item_tab slds-is-active" role="presentation">
+                    <a href="#" class="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
+                    <span class="slds-indicator-container"></span>
+                    <span class="slds-icon_container" title="Home">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#home"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Home</span>
+                    </span>
+                    <span class="slds-truncate" title="Home">Home</span>
+                    </a>
+                </li>
+
+                <li class="slds-context-bar__item slds-context-bar__item_tab" role="presentation">
+                    <a href="#" class="slds-context-bar__label-action" role="tab" title="NTO" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-2" id="context-tab-id-2">
+                    <span class="slds-indicator-container"></span>
+                    <span class="slds-icon_container" title="Magick Flow">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#magicwand"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Magick Flow</span>
+                    </span>
+                    <span class="slds-truncate" title="NTO">NTO</span>
+                    </a>
+                    <div class="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none">
+                    <button class="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Actions for NTO">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Actions for NTO</span>
+                    </button>
+                    <div class="slds-dropdown slds-dropdown_right">
+                    <ul class="slds-dropdown__list" role="menu">
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="#play-in-browser" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Play in Browser">Play in Browser</span>
+                            <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                            <span class="slds-assistive-text">:</span>g</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="#play-in-browser" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Deploy">Deploy</span>
+                            <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                            <span class="slds-assistive-text">:</span>d</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                    <a href="#" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Open in Builder">Open in Builder</span>
+                    <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                    <span class="slds-assistive-text">:</span>⇧ + b</span>
+                    </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="#" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Close Tab">Close Tab</span>
+                            <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                            <span class="slds-assistive-text">:</span>w</span>
+                        </a>
+                    </li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none">
+                    <button class="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small" tabindex="-1" title="Close NTO">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close NTO</span>
+                    </button>
+                    </div>
+                </li>
+
+                </ul>
+                </div>
+                </div>
+        </div>
+
+        <main class="app-wrapper slds-template_default">
+            
+
+
+<div class="slds-page-header slds-box slds-grid">
+  <div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center">
+    <h1 class="slds-col">
+      <span class="slds-page-header__title slds-truncate" title="Server Center">Server Center</span>
+    </h1>
+    <div class="slds-col">
+      <span id="statusBadge" class="slds-badge">Badge Label</span>
+    </div>
+    <div id="serverToggle" class="slds-form-element slds-col" style="align-self: baseline">
+      <label class="slds-checkbox_toggle slds-grid">
+      <span class="slds-form-element__label slds-m-bottom_none">Run Server</span>
+      <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16"
+        aria-describedby="checkbox-toggle-16" />
+      <span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+        <span class="slds-checkbox_faux"></span>
+        <span class="slds-checkbox_on">Run</span>
+        <span class="slds-checkbox_off">Stop</span>
+      </span>
+    </label>
+    </div>
+  </div>
+  <div class="slds-col slds-size_1-of-2 slds-grid" style="align-items: center">
+    <div id="statusIndicator" class="slds-col slds-size_2-of-4">
+      Run Time: 00:00:00
+    </div>
+    <div class="slds-col slds-size_1-of-4">
+      View Server Info
+      <span onclick="toggleServerInfo()" class="slds-icon_container slds-icon-utility-info" title="Server Info Icon" style="cursor: pointer">
+      <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+        <use href="styles/icons/utility-sprite/svg/symbols.svg#info"></use>
+      </svg>
+      <span class="slds-assistive-text">Server Info Icon</span>
+      </span>
+    </div>
+    <div class="slds-col slds-size_1-of-4">
+      <span onclick="listMagickFlows()" class="slds-icon_container slds-icon-utility-info" title="List Magick Flows" style="cursor: pointer">
+      <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+        <use href="styles/icons/utility-sprite/svg/symbols.svg#info"></use>
+      </svg>
+      <span class="slds-assistive-text">List Magick Flows</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<!--
+  Using the grid to make a 2-column layout
+  https://www.lightningdesignsystem.com/components/utilities/grid/
+-->
+<div class="slds-grid slds-gutters_direct slds-wrap stretch-children">
+
+  <div class="slds-col slds-size_1-of-3 slds-m-top_large">
+    <article class="slds-card slds-box_link">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+          <a href="/nto" target="_blank" class="slds-card__header-link slds-truncate" title="NTO">
+            <span>NTO</span>
+          </a>
+        </h2>
+      </div>
+      <div class="slds-no-flex demxue-app-badge-group">
+        <span class="slds-badge slds-theme_local">Local</span>
+        <span class="slds-badge slds-theme_deployed">Deployed</span>
+        <span class="slds-badge slds-theme_error">Broken</span>
+        
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <img class="" src="/assets/workshop-salesforce-red.jpg">
+  </div>
+  <footer class="slds-card__footer">
+    <div class="slds-grid">
+      <div class="slds-col_bump-right">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Charts" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#play"></use>
+            </svg>
+            <span class="slds-assistive-text">Play Magick Flow in Browser</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#open_folder"></use>
+            </svg>
+            <span class="slds-assistive-text">Reveal in Finder</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#share_file"></use>
+            </svg>
+            <span class="slds-assistive-text">Open Sketch File</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-col_bump-left">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+            </svg>
+            <span class="slds-assistive-text">Edit</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+            </svg>
+            <span class="slds-assistive-text">Delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  </div>
+
+  <div class="slds-col slds-size_1-of-3 slds-m-top_large">
+    <article class="slds-card slds-box_link">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+          <a href="/nto" target="_blank" class="slds-card__header-link slds-truncate" title="NTO">
+            <span>NTO</span>
+          </a>
+        </h2>
+      </div>
+      <div class="slds-no-flex demxue-app-badge-group">
+        <span class="slds-badge slds-theme_local">Local</span>
+        <span class="slds-badge slds-theme_deployed">Deployed</span>
+        <span class="slds-badge slds-theme_error">Broken</span>
+        
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <img class="" src="/assets/workshop-salesforce-red.jpg">
+  </div>
+  <footer class="slds-card__footer">
+    <div class="slds-grid">
+      <div class="slds-col_bump-right">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Charts" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#play"></use>
+            </svg>
+            <span class="slds-assistive-text">Play Magick Flow in Browser</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#open_folder"></use>
+            </svg>
+            <span class="slds-assistive-text">Reveal in Finder</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#share_file"></use>
+            </svg>
+            <span class="slds-assistive-text">Open Sketch File</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-col_bump-left">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+            </svg>
+            <span class="slds-assistive-text">Edit</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+            </svg>
+            <span class="slds-assistive-text">Delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  </div>
+
+  <div class="slds-col slds-size_1-of-3 slds-m-top_large">
+    <article class="slds-card slds-box_link">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+          <a href="/nto" target="_blank" class="slds-card__header-link slds-truncate" title="NTO">
+            <span>NTO</span>
+          </a>
+        </h2>
+      </div>
+      <div class="slds-no-flex demxue-app-badge-group">
+        <span class="slds-badge slds-theme_local">Local</span>
+        <span class="slds-badge slds-theme_deployed">Deployed</span>
+        <span class="slds-badge slds-theme_error">Broken</span>
+        
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <img class="" src="/assets/workshop-salesforce-red.jpg">
+  </div>
+  <footer class="slds-card__footer">
+    <div class="slds-grid">
+      <div class="slds-col_bump-right">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Charts" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#play"></use>
+            </svg>
+            <span class="slds-assistive-text">Play Magick Flow in Browser</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#open_folder"></use>
+            </svg>
+            <span class="slds-assistive-text">Reveal in Finder</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#share_file"></use>
+            </svg>
+            <span class="slds-assistive-text">Open Sketch File</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-col_bump-left">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+            </svg>
+            <span class="slds-assistive-text">Edit</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+            </svg>
+            <span class="slds-assistive-text">Delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  </div>
+
+  <div class="slds-col slds-size_1-of-3 slds-m-top_large">
+    <article class="slds-card slds-box_link">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+          <a href="/nto" target="_blank" class="slds-card__header-link slds-truncate" title="NTO">
+            <span>NTO</span>
+          </a>
+        </h2>
+      </div>
+      <div class="slds-no-flex demxue-app-badge-group">
+        <span class="slds-badge slds-theme_local">Local</span>
+        <span class="slds-badge slds-theme_deployed">Deployed</span>
+        <span class="slds-badge slds-theme_error">Broken</span>
+        
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <img class="" src="/assets/workshop-salesforce-red.jpg">
+  </div>
+  <footer class="slds-card__footer">
+    <div class="slds-grid">
+      <div class="slds-col_bump-right">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Charts" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#play"></use>
+            </svg>
+            <span class="slds-assistive-text">Play Magick Flow in Browser</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#open_folder"></use>
+            </svg>
+            <span class="slds-assistive-text">Reveal in Finder</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#share_file"></use>
+            </svg>
+            <span class="slds-assistive-text">Open Sketch File</span>
+          </button>
+        </div>
+      </div>
+      <div class="slds-col_bump-left">
+        <div class="slds-button-group" role="group">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Filter List" aria-pressed="false">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+            </svg>
+            <span class="slds-assistive-text">Edit</span>
+          </button>
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+            </svg>
+            <span class="slds-assistive-text">Delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  </div>
+
+    <a  class="slds-col slds-size_1-of-3 slds-m-top_large" href="#new-magick-flow" >
+      <article class="slds-card slds-box_link slds-align_absolute-center">
+        <div class="slds-card__body slds-card__body_inner ">
+          
+          <img src="/assets/empty-state-small.png">
+        </div>
+      </article>
+  
+    </a>
+
+
+
+
+
+
+</div>
+
+<h2 class="slds-assistive-text">Utility Bar</h2>
+
+<footer class="slds-utility-bar_container" aria-label="Utility Bar">
+	<h2 class="slds-assistive-text">Utility Bar</h2>
+	<ul class="slds-utility-bar" style="height: 3.5rem">
+
+
+		<li class="slds-utility-bar__item">
+			<button onclick="toggleServerInfo()" class="slds-button slds-utility-bar__action " aria-pressed="true">
+			<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#call"></use>
+			</svg>
+			<span class="slds-utility-bar__text">Server Log</span>
+		</button>
+		</li>
+		<li class="slds-utility-bar__item">
+			<button onclick="toggleDebugInfo()" class="slds-button slds-utility-bar__action" aria-pressed="false">
+			<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clock"></use>
+			</svg>
+			<span class="slds-utility-bar__text">Debug Log</span>
+		</button>
+		</li>
+		<li class="slds-utility-bar__item">
+			<button onclick="toggleErrorInfo()" class="slds-button slds-utility-bar__action" aria-pressed="false">
+			<svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+				<use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#note"></use>
+			</svg>
+			<span class="slds-utility-bar__text">Error Log</span>
+		</button>
+		</li>
+		<li class="slds-utility-bar__action slds-col_bump-right slds-shrink-none">
+			<input type="checkbox" checked="true" id="scroll-toggle" />&nbsp;Scroll Logs with output
+		</li>
+
+		<li class="slds-utility-bar__item">
+			<div class="slds-form-element slds-utility-bar__action">
+				<label class="slds-checkbox_toggle slds-grid">
+					<span class="slds-form-element__label slds-m-bottom_none">Server Status</span>
+					<input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16"
+						aria-describedby="checkbox-toggle-16" checked="" />
+					<span id="checkbox-toggle-16" class="slds-checkbox_faux_container" aria-live="assertive">
+						<span class="slds-checkbox_faux"></span>
+						<span class="slds-checkbox_on">Running</span>
+						<span class="slds-checkbox_off">Stopped</span>
+					</span>
+				</label>
+			</div>
+		</li>
+		<li class="slds-utility-bar__item">
+
+			<div id="statusIndicator" class="slds-align_absolute-center slds-p-around--small">
+				<dl class="slds-list_inline">
+					<dt class="slds-item_label slds-text-color_weak slds-truncate" title="Run Time:">Run Time:</dt>
+					<dd class="slds-item_detail slds-truncate" title=" 00:00:00"> 00:00:00</dd>
+				</dl>
+				
+			</div>
+		</li>
+
+	</ul>
+
+
+</footer>
+
+
+<div id="server-log-panel" class="slds-utility-panel slds-grid slds-grid_vertical slds-is-closed" role="dialog" aria-labelledby="panel-heading-01">
+    <div class="slds-utility-panel__header slds-grid slds-shrink-none">
+        <div class="slds-media slds-media_center">
+            <div class="slds-media__figure slds-m-right_x-small">
+                <span class="slds-icon_container">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_bottom"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <h2 id="panel-heading-01">Server Log</h2>
+            </div>
+        </div>
+        <div class="slds-col_bump-left slds-shrink-none">
+            <button onclick="toggleServerInfo()" class="slds-button slds-button_icon slds-button_icon" title="Close Panel">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+                </svg>
+                <span class="slds-assistive-text">Close Panel</span>
+            </button>
+        </div>
+    </div>
+    <div class="slds-utility-panel__body slds-scrollable">
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+
+    </div>
+</div>
+
+
+<div id="debug-log-panel" class="slds-utility-panel slds-grid slds-grid_vertical slds-is-closed" role="dialog" aria-labelledby="panel-heading-01">
+    <div class="slds-utility-panel__header slds-grid slds-shrink-none">
+        <div class="slds-media slds-media_center">
+            <div class="slds-media__figure slds-m-right_x-small">
+                <span class="slds-icon_container">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_bottom"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <h2 id="panel-heading-01">Debug Log</h2>
+            </div>
+        </div>
+        <div class="slds-col_bump-left slds-shrink-none">
+            <button onclick="toggleDebugInfo()" class="slds-button slds-button_icon slds-button_icon" title="Close Panel">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+                </svg>
+                <span class="slds-assistive-text">Close Panel</span>
+            </button>
+        </div>
+    </div>
+    <div class="slds-utility-panel__body slds-scrollable">
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+
+    </div>
+</div>
+
+<div id="error-log-panel" class="slds-utility-panel slds-grid slds-grid_vertical slds-is-closed" role="dialog" aria-labelledby="panel-heading-01">
+    <div class="slds-utility-panel__header slds-grid slds-shrink-none">
+        <div class="slds-media slds-media_center">
+            <div class="slds-media__figure slds-m-right_x-small">
+                <span class="slds-icon_container">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#toggle_panel_bottom"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <h2 id="panel-heading-01">Error Log</h2>
+            </div>
+        </div>
+        <div class="slds-col_bump-left slds-shrink-none">
+            <button onclick="toggleErrorInfo()" class="slds-button slds-button_icon slds-button_icon" title="Close Panel">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#minimize_window"></use>
+                </svg>
+                <span class="slds-assistive-text">Close Panel</span>
+            </button>
+        </div>
+    </div>
+    <div class="slds-utility-panel__body slds-scrollable">
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+        <pre id="buffer998052188">ccorwin</pre>
+        <pre id="buffer121283359">/Users/ccorwin/demuxe-electron</pre>
+        <pre id="buffer867370156">export NVM_DIR="$HOME/.nvm"</pre>
+        <pre id="buffer601910632">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer937182505">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer12999232">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer287439542">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer426030296">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; . "$NVM_DIR/nvm.sh"  # This loads nvm</pre>
+        <pre id="buffer237992178">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</pre>
+        <pre id="buffer815183937">v12.16.1</pre>
+        <pre id="buffer741082467">audited 964 packages in 7.976s</pre>
+        <pre id="buffer884245699"></pre>
+        <pre id="buffer382630615">20 packages are looking for funding</pre>
+        <pre id="buffer349681478">  run `npm fund` for details</pre>
+        <pre id="buffer65053720"></pre>
+        <pre id="buffer396234174">found 47 vulnerabilities (31 low, 3 moderate, 13 high)</pre>
+        <pre id="buffer405216463">  run `npm audit fix` to fix them, or `npm audit` for details</pre>
+
+    </div>
+</div>
+
+
+
+
+
+            <div class="app-footer-placeholder"></div>
+        </main>
+
+        
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/vendor/svg4everybody.min.js"></script>
+        <script>
+            svg4everybody();
+        </script>
+    </body>
+</html>

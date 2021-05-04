@@ -46,33 +46,3 @@ $static-font-path: '/assets/fonts/webfonts';
   left: 0;
 }
 
-
-
-#server-log-panel.slds-utility-panel {
-  bottom: 2.575rem;
-  width: 85vw;
-  height: 62vh;
-  z-index: 2;
-  box-shadow: -1px -2px 4px 4px rgba(0, 0, 0, 0.33);
-  background: #250033e6;
-  min-width: 25rem;
-}
-
-#server-log-panel .server-log-panel__body {
-  height: 80vh;
-}
-
-
-#server-log-panel pre {
-  margin: 0 0 0 2.5rem;
-  padding: 0;
-  border-bottom: 0.5px dashed #58456d36;
-  overflow: initial;
-  color: #ffffffdb;
-
-}
-
-.slds-utility-panel__body.slds-scrollable {
-  padding-bottom: 4rem;
-
-}

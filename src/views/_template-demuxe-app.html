@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Salesforce Lightning Design System Starter Kit</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <!-- Prototype styles -->
+        <link rel="stylesheet" href="/styles/index.css" />
+    </head>
+
+    <body>
+        <!--
+    Base Global Header component
+    https://www.lightningdesignsystem.com/components/global-header/
+    -->
+
+        <header class="slds-global-header_container">
+            <a
+                href="javascript:void(0);"
+                class="slds-assistive-text slds-assistive-text_focus"
+                >Skip to Navigation</a
+            >
+            <a
+                href="javascript:void(0);"
+                class="slds-assistive-text slds-assistive-text_focus"
+                >Skip to Main Content</a
+            >
+            <div class="slds-global-header slds-grid slds-grid_align-spread">
+                <div class="slds-global-header__item">
+                    <div class="slds-global-header__logo"></div>
+                </div>
+                <div class="slds-global-header__item">
+                    <ul class="slds-global-actions">
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__help slds-global-actions__item-action"
+                                    aria-haspopup="true"
+                                    title="Help and Training"
+                                >
+                                    <svg
+                                        class="slds-button__icon slds-global-header__icon"
+                                        aria-hidden="true"
+                                    >
+                                        <use
+                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#question"
+                                        ></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Help and Training</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__setup slds-global-actions__item-action"
+                                    aria-haspopup="true"
+                                    title="Application Preferences"
+                                >
+                                    <svg
+                                        class="slds-button__icon slds-global-header__icon"
+                                        aria-hidden="true"
+                                    >
+                                        <use
+                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#setup"
+                                        ></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Application Preferences</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-actions__notifications slds-global-actions__item-action"
+                                    title="no new notifications"
+                                    aria-live="assertive"
+                                    aria-atomic="true"
+                                >
+                                    <svg
+                                        class="slds-button__icon slds-global-header__icon"
+                                        aria-hidden="true"
+                                    >
+                                        <use
+                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#notification"
+                                        ></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">no new notifications</span>
+                                </button>
+                                <span aria-hidden="true" class="slds-notification-badge"
+                                    >0</span
+                                >
+                            </div>
+                        </li>
+                        <li class="slds-global-actions__item">
+                            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                                <button
+                                    class="slds-button slds-global-actions__avatar slds-global-actions__item-action"
+                                    title="person name"
+                                    aria-haspopup="true"
+                                >
+                                    <span
+                                        class="slds-avatar slds-avatar_circle slds-avatar_medium"
+                                    >
+                                        <img
+                                            alt="Person name"
+                                            src="/assets/images/avatar2.jpg"
+                                            title="User avatar"
+                                        />
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!--
+    Placeholder to push the context bar down
+    -->
+        <div class="app-header-placeholder"></div>
+
+        <!--
+    Navigation Bar component
+    https://www.lightningdesignsystem.com/components/global-navigation/
+    -->
+        <div style="height: 16rem">
+            <div class="slds-context-bar slds-context-bar_tabs">
+                <div class="slds-context-bar__primary">
+                <div class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-no-hover">
+                <div class="slds-context-bar__icon-action">
+                <button class="slds-button slds-icon-waffle_container slds-context-bar__button" title="Description of the icon when needed">
+                <span class="slds-icon-waffle">
+                <span class="slds-r1"></span>
+                <span class="slds-r2"></span>
+                <span class="slds-r3"></span>
+                <span class="slds-r4"></span>
+                <span class="slds-r5"></span>
+                <span class="slds-r6"></span>
+                <span class="slds-r7"></span>
+                <span class="slds-r8"></span>
+                <span class="slds-r9"></span>
+                </span>
+                <span class="slds-assistive-text">Open App Launcher</span>
+                </button>
+                </div>
+                <span class="slds-context-bar__label-action slds-context-bar__app-name">
+                <span class="slds-truncate" title="Demuxe">Demuxe</span>
+                </span>
+                </div>
+                </div>
+                <div class="slds-context-bar__secondary">
+                <div class="slds-context-bar__vertical-divider"></div>
+                <ul class="slds-grid" role="tablist">
+                <li class="slds-context-bar__item slds-context-bar__item_tab slds-is-active" role="presentation">
+                    <a href="#" class="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
+                    <span class="slds-indicator-container"></span>
+                    <span class="slds-icon_container" title="Home">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#home"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Home</span>
+                    </span>
+                    <span class="slds-truncate" title="Home">Home</span>
+                    </a>
+                </li>
+
+                <li class="slds-context-bar__item slds-context-bar__item_tab" role="presentation">
+                    <a href="#" class="slds-context-bar__label-action" role="tab" title="NTO" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-2" id="context-tab-id-2">
+                    <span class="slds-indicator-container"></span>
+                    <span class="slds-icon_container" title="Magick Flow">
+                    <svg class="slds-icon slds-icon_small slds-icon-text-default slds-m-right--x-small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#magicwand"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Magick Flow</span>
+                    </span>
+                    <span class="slds-truncate" title="NTO">NTO</span>
+                    </a>
+                    <div class="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none">
+                    <button class="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Actions for NTO">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Actions for NTO</span>
+                    </button>
+                    <div class="slds-dropdown slds-dropdown_right">
+                    <ul class="slds-dropdown__list" role="menu">
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="#play-in-browser" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Play in Browser">Play in Browser</span>
+                            <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                            <span class="slds-assistive-text">:</span>g</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="#play-in-browser" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Deploy">Deploy</span>
+                            <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                            <span class="slds-assistive-text">:</span>d</span>
+                        </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                    <a href="#" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Open in Builder">Open in Builder</span>
+                    <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                    <span class="slds-assistive-text">:</span>⇧ + b</span>
+                    </a>
+                    </li>
+                    <li class="slds-dropdown__item" role="presentation">
+                        <a href="#" role="menuitem" tabindex="-1">
+                            <span class="slds-truncate" title="Close Tab">Close Tab</span>
+                            <span class="slds-text-body_small slds-text-color_weak slds-p-left_large">
+                            <span class="slds-assistive-text">:</span>w</span>
+                        </a>
+                    </li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none">
+                    <button class="slds-button slds-button_icon slds-button_icon-current-color slds-button_icon-container slds-button_icon-x-small" tabindex="-1" title="Close NTO">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close NTO</span>
+                    </button>
+                    </div>
+                </li>
+
+                </ul>
+                </div>
+                </div>
+        </div>
+
+        <main class="app-wrapper slds-template_default">
+            {% block content %}
+            <!-- Content from HTML files gets injected here -->
+            {% endblock %}
+
+            <div class="app-footer-placeholder"></div>
+        </main>
+
+        
+
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/vendor/svg4everybody.min.js"></script>
+        <script>
+            svg4everybody();
+        </script>
+    </body>
+</html>
